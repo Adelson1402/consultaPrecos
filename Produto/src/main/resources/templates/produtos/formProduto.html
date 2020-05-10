@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>Produtos</title>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+       
+      
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">FIRST INK</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/produtos">Listar Produtos</a></li>
+        <!--  <li><a href="badges.html">Consultar Estoque</a></li>-->
+        
+      </ul>
+    </div>
+  </nav>
+  <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+ 
+</head>
+
+<body>
+ <h1 align="center">Cadastro de Produtos</h1>
+ <form class="container" method="post">
+  
+  Nome:<input type="text" class="caixasTxt" name="nome" required>
+  <div class="row">
+   <div class="input-field col s3">
+   Tipo:<input type="text" class="caixasTxt" name="tipo" required>
+   </div>
+   <div class="input-field col s3">
+   Marca:<input type="text" class="caixasTxt" name="marca" required>
+   </div>
+   <div class="input-field col s3">
+   Valor:<input type="number"   id="campoDinheiro" name="valor"required  placeholder="R$ 0,00">
+   </div>
+  </div>
+  
+
+    <button class="btn waves-effect waves-light" type="submit" name="action">CADASTRAR
+      <i class="material-icons right">send</i>
+    </button>
+  
+
+
+
+
+</form>
+       
+       
+       
+       <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+
+</body>
+
+
+
+
+</html>
