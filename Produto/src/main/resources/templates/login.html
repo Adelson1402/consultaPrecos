@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+  <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+    <meta charset="utf-8">  
+    <link type="text/css" rel="stylesheet" href="loginCss/login.css" />
+     <title>Login</title>
+      
+    </head>
+
+    <body>
+     <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}">
+            You have been logged out.
+        </div>
+    
+      <div id="painel">
+      
+         <form th:action="@{/login}" method="post">
+         <div id="avatar">
+             <img src="images/avatar-icon.jpg" width="100px" height="94px" />
+         </div>
+         <p align="center">LOGIN</p>
+         <hr>
+             <br>
+            <input type="text" name="username" placeholder="     Usuario"/><br>
+            <br>
+            <br>
+             <br>
+            <input type="password" name="password" placeholder="     Senha"/> <br>   
+            <br>
+            <br> 
+            <button type="submit" name="Sign In">  Entrar </button>
+         </form>
+      </div>
+    <div id="footer">
+    <hr>
+     <p align="center">Sistema Desenvolvido por Adelson</p>
+    </div>
+    </body>
+    
+  </html>
+        

@@ -33,6 +33,8 @@ public class ProdutoController {
 		return "redirect:/cadastrarProdutos";
 	}
 	
+	
+	
 	@RequestMapping("/produtos")
 	public ModelAndView listaProdutos() {
 		ModelAndView mvc = new ModelAndView("index");
@@ -49,4 +51,13 @@ public class ProdutoController {
 		return mvc;
 		
 	}
+	
+	@RequestMapping(value="/deletar")
+	public String deletarProduto( long codigo) {
+		Produtos produto = pr.findByCodigo(codigo);
+		pr.delete(produto);
+		
+		return "redirect:/produtos";
+		
+}
 }

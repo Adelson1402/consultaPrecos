@@ -42,9 +42,10 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 </head>
 
 <body>
-<h2> Lista de Produtos</h2>
+<h2> Lista de Revendedores</h2>
 <br/>
 <br/>
+<!--  
 <form class="container" method="post" action="filtrar" >
 <div class="row" >
  <div class="input-field col s3">
@@ -60,29 +61,30 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
    
  </div>
 </form>
+-->
 
 
 <table class="container">
 <thead>
   <tr>
-    <th>Nome</th>  
-    <th>Tipo/Modelo</th>  
-    <th>Valor</th> 
-    <th>Valor Revenda</th> 
-    <th>Marca</th>
-    <th>Deletar</th>
+    <th>Nome do Revendedor</th>  
+    <th>cpf</th>  
+    <th>Celular</th> 
+    <th>E-mail</th> 
+    <th>Whats</th>
+    
   
   
   </tr>
 
 </thead>
-<tr th:each="produto : ${prods}">
-      <td><span th:text="${produto.nome}"></span></td>
-      <td><span th:text="${produto.tipo}"></span></td>
-      <td><span th:text="${produto.valor}"></span></td>
-      <td><span th:text="${produto.valorRevenda}"></span></td>
-      <td><span th:text="${produto.marca}"></span></td>
-      <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('PC#deletarProduto').arg(0, produto.codigo)).build()}"> <i class="material-icons right">delete</i></a></td>
+<tr th:each="revendedores : ${revend}">
+      <td><span th:text="${revendedores.nomeRevendedor}"></span></td>
+      <td><span th:text="${revendedores.cpf}"></span></td>
+      <td><span th:text="${revendedores.celular}"></span></td>
+      <td><span th:text="${revendedores.email}"></span></td>
+      <td><span th:text="${revendedores.whats}"></span></td>
+      <!-- <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('RC#deletarProduto').arg(0, produto.codigo)).build()}"> <i class="material-icons right">delete</i></a></td>-->
     
 </tr>
 </table>

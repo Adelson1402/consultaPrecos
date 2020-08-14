@@ -25,18 +25,19 @@ public class Produtos implements Serializable  {
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.AUTO)
-	private int codigo;
+	private long codigo;
 	
 	private String nome;
 	private String tipo;
-	private float valor;
+	private String valor;
 	private String marca;
+	private String valorRevenda;
 	
 	
-	public int getCodigo() {
+	public long getCodigo() {
 		return codigo;
 	}
-	public void setCodigo(int codigo) {
+	public void setCodigo(long codigo) {
 		this.codigo = codigo;
 	}
 	public String getNome() {
@@ -51,10 +52,10 @@ public class Produtos implements Serializable  {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public float getValor() {
+	public String getValor() {
 		return valor;
 	}
-	public void setValor(float valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
 	}
 	public String getMarca() {
@@ -63,5 +64,12 @@ public class Produtos implements Serializable  {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-
+ 
+	public String getValorRevenda() {
+		return valorRevenda;
+	}
+	public void setValorRevenda(String valorRevenda) {
+		this.valorRevenda = valorRevenda;
+		
+	}
 }
