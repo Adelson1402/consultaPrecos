@@ -100,10 +100,11 @@
 	    <plugin>
 	      <groupId>org.springframework.boot</groupId>
 	      <artifactId>maven-compiler-plugin</artifactId>
-	      <version>3.0</version>
+	      <version>3.6.3</version>
 	<configuration>
 		<source>1.8</source>
 		<target>1.8</target>
+		<enconding>UTF-8</enconding>
 	</configuration>
 	    </plugin>
 	    
