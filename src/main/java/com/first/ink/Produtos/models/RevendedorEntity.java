@@ -1,5 +1,6 @@
 package com.first.ink.Produtos.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,6 +16,7 @@ public class RevendedorEntity {
 	private boolean whats;
 	
 	@Id
+	@Column(name="nome_revendedor")
 	public String getNomeRevendedor() {
 		return nomeRevendedor;
 	}
