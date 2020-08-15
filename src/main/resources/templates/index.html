@@ -1,0 +1,129 @@
+<html
+ xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+      
+      <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">FIRST INK</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+         <li><a href="/logout">Sair<i class="material-icons right">exit_to_app</i></a></li>
+         <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
+         <li><a href="">Área Técnica<i class="material-icons right">build</i></a></li>
+         <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
+         
+         
+        <!--  <li><a href="badges.html">Consultar Estoque</a></li>-->
+        
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Style FOOTER -->
+  <style>
+     body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+  </style>
+
+</head>
+
+<body>
+<h2> Lista de Produtos</h2>
+<br/>
+<br/>
+<form class="container" method="post" action="filtrar" >
+<div class="row" >
+ <div class="input-field col s3">
+   <input type="text" name="filtro" placeholder="Procurar"/>
+ </div><br/>
+   <button class="btn waves-effect waves-light"  type="submit" name="action">
+      <i class="material-icons right">search</i>
+    </button>
+   <button class="btn waves-effect waves-light" action="produtos">LISTAR
+      <i class="material-icons right">format_list_bulleted</i>
+    </button>
+    
+   
+ </div>
+</form>
+
+
+<table class="container">
+<thead>
+  <tr>
+    <th>Nome</th>  
+    <th>Tipo/Modelo</th>  
+    <th>Valor</th> 
+    <th>Valor Revenda</th> 
+    <th>Marca</th>
+    <th>Deletar</th>
+  
+  
+  </tr>
+
+</thead>
+<tr th:each="produto : ${prods}">
+      <td><span th:text="${produto.nome}"></span></td>
+      <td><span th:text="${produto.tipo}"></span></td>
+      <td><span th:text="${produto.valor}"></span></td>
+      <td><span th:text="${produto.valorRevenda}"></span></td>
+      <td><span th:text="${produto.marca}"></span></td>
+      <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('PC#deletarProduto').arg(0, produto.codigo)).build()}"> <i class="material-icons right">delete</i></a></td>
+    
+</tr>
+</table>
+<!-- Inicio do footer com TAGS vazias -->
+<header>
+</header>
+<main>
+</main>
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VOVIN SYSTEM</h5>
+                <p class="grey-text text-lighten-4">Sistema desenvolvido para cadastro, consulta de preços e consulta de revenda.</p>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">ATALHOS RELACIONADOS</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" target="_blanck" href="http://servicos.mogidascruzes.sp.gov.br/tbw/loginCNPJContribuinte.jsp?execobj=ContribuintesWebRelacionados">Nota Fiscal de Serviço</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blanck" href="http://www.printerservice.com.br/">Printer Service</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.teamviewer.com/pt-br/download/windows/">Team viewer</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blank" href="https://anydesk.com/pt/downloads/windows">AnyDesk</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container" align="center">
+            © 2020 Direitos Reservados <br>Desenvolvido por Adelson dos Santos Pinheiro
+            
+            </div>
+          </div>
+        </footer>
+        <!-- FIM do footer com TAGS vazias -->
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      
+      
+</body>
+
+
+
+</html>
