@@ -91,30 +91,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- heroku PLUGIN -->
+	             <plugin>
+                    <groupId>com.heroku.sdk</groupId>
+                    <artifactId>heroku-maven-plugin</artifactId>
+                    <version>3.0.3</version>
+                </plugin>
 		</plugins>
 	</build>
-	<profiles>
-	 <profile>
-	 <build>
-	   <plugins>
-	    <plugin>
-	      <groupId>org.springframework.boot</groupId>
-	      <artifactId>maven-compiler-plugin</artifactId>
-	      <version>3.1</version>
-	<configuration>
-		<release>11</release>
-		<enconding>UTF-8</enconding>
-		
-	</configuration>
 	
-	    </plugin>
-	    
-	   
-	   </plugins>
-	 </build>
-	 
-	 </profile>
-	
-	</profiles>
 
 </project>
