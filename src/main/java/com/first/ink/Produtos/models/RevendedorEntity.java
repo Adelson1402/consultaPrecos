@@ -9,13 +9,14 @@ import javax.persistence.Table;
 @Table (name="tbl_revendedor")
 public class RevendedorEntity {
 	
+	@Id
 	private String nomeRevendedor;
 	private String cpf;
 	private String celular;
 	private String email;
 	private boolean whats;
 	
-	@Id
+	
 	@Column(name="nome_revendedor")
 	public String getNomeRevendedor() {
 		return nomeRevendedor;
