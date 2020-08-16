@@ -1,4 +1,4 @@
- /**
+/**
 package com.first.ink.Produto;
 
 import java.net.URI;
@@ -32,4 +32,5 @@ public class DataConfiguration {
 
 
 }
+
 **/
