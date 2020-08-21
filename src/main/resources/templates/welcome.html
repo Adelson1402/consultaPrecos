@@ -19,16 +19,17 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    
   }
 
   main {
     flex: 1 0 auto;
   }
- 
+ #idLogin{
+   text-transform: uppercase;
+ }
   </style>
   
-  
-
 </head>
 
 <body>
@@ -36,6 +37,7 @@ body {
 <nav class="grey darken-3">
     <div class="nav-wrapper">
       <a href="/" class="brand-logo right">FIRST INK</a>
+      
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul  class="left hide-on-med-and-down">
          <li><a href="/logout">Sair/Entrar<i class="material-icons right">exit_to_app</i></a></li>
@@ -49,6 +51,9 @@ body {
   </nav>
   <!-- side-nav -->
      <ul class="sidenav" id="mobile-demo">
+     <hr>
+     <p align="center" id="idLogin">[[${#httpServletRequest.remoteUser}]]</p>
+     <hr>
          <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
          <li><a href="/manutencao.html">Área Técnica<i class="material-icons right">build</i></a></li>
          <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
@@ -64,8 +69,9 @@ body {
    <hr>
    <BR>
    <BR>
-   <p align="center">SISTEMA EM ATUALIZAÇÃO</p>
+   <p align="center">SISTEMA EM ATUALIZAÇÃO<br>V 1.6</p>
   </div>
+  
   <br>
   <br>
    <!-- PRELOADERS -->
@@ -169,6 +175,8 @@ body {
     	  });
      </script>
         
+    
+  
     
        
      
