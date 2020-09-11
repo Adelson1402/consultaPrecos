@@ -55,23 +55,23 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <h2> Lista de Revendedores</h2>
 <br/>
 <br/>
-<!--  
-<form class="container" method="post" action="filtrar" >
+ 
+<form class="container" method="post" action="filtraRevendedor" >
 <div class="row" >
  <div class="input-field col s3">
-   <input type="text" name="filtro" placeholder="Procurar"/>
+   <input type="text" name="filtroRevendedor" placeholder="Procurar"/>
  </div><br/>
    <button class="btn waves-effect waves-light"  type="submit" name="action">
       <i class="material-icons right">search</i>
     </button>
-   <button class="btn waves-effect waves-light" action="produtos">LISTAR
+   <button class="btn waves-effect waves-light" action="revendedores">LISTAR
       <i class="material-icons right">format_list_bulleted</i>
     </button>
     
    
  </div>
 </form>
--->
+
 
 
 <table class="container">
@@ -93,8 +93,8 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
       <td><span th:text="${revendedores.cpf}"></span></td>
       <td><span th:text="${revendedores.celular}"></span></td>
       <td><span th:text="${revendedores.email}"></span></td>
-      <td><div id="green" th:if="${revendedores.whats}==true"><i class="material-icons center">done</i></div></td>
-      <!-- <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('RC#deletarProduto').arg(0, produto.codigo)).build()}"> <i class="material-icons right">delete</i></a></td>-->
+      <td><div id="green" th:if="${revendedores.whats}==true"><i class="material-icons center">done</i></div><div id="geen" th:if="#{revendedores.whats}==false" ><i class="material-icons center">cancel</i></div></td>
+      <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('RC#deletaRevendedor').arg(0, revendedores.codigoRevendedor)).build()}"> <i class="material-icons right">delete</i></a></td>
     
 </tr>
 </table>

@@ -1,16 +1,25 @@
 package com.first.ink.Produtos.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
+
 import javax.persistence.Table;
 
 @Entity
 @Table (name="tbl_revendedor")
-public class RevendedorEntity {
+public class RevendedorEntity implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long codigoRevendedor;
+	
 	private String nomeRevendedor;
 	
 	private String cpf;
@@ -50,6 +59,12 @@ public class RevendedorEntity {
 	}
 	public void setWhats(boolean whats) {
 		this.whats = whats;
+	}
+	public long getCodigoRevendedor() {
+		return codigoRevendedor;
+	}
+	public void setCodigoRevendedor(long codigoRevendedor) {
+		this.codigoRevendedor = codigoRevendedor;
 	}
 	
 	
