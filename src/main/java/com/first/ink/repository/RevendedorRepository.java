@@ -10,6 +10,9 @@ public interface RevendedorRepository extends CrudRepository<RevendedorEntity, S
 	//essa query faz a busca no banco com parametros iguais aos passados no front end
 	@Query(value="select * from tbl_revendedor where nome_revendedor like %?1% ", nativeQuery = true)
 	Iterable<RevendedorEntity> findRevendedorEntityByName (String nomeRevendedor);
+	
+	@Query(value="select * from tbl_revendedor where cpf like %?1%", nativeQuery = true)
+	Iterable<RevendedorEntity> findRevendedorEntityByCpf  (String cpf);
 	RevendedorEntity findByCodigoRevendedor (long codigoRevendedor);
 	
 

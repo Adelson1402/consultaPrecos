@@ -24,7 +24,7 @@ public class ProdutoController {
 	public String form() {
 		return "produtos/formProduto";
 	}
-
+//salva um produto no banco de dados
 	@RequestMapping(value="/cadastrarProdutos", method=RequestMethod.POST)
 	public String form(Produtos produtos) {
 		
@@ -34,7 +34,7 @@ public class ProdutoController {
 	}
 	
 	
-	
+	//renderiza uma lista de produtos em "index"
 	@RequestMapping("/produtos")
 	public ModelAndView listaProdutos() {
 		ModelAndView mvc = new ModelAndView("index");
@@ -43,8 +43,9 @@ public class ProdutoController {
 		return mvc;
 		
 	}
+	//filtra um produto
 	@PostMapping("/filtrar")
-	public ModelAndView filtro(@RequestParam("filtro")String filtro) {
+	public ModelAndView filtro(@RequestParam("filtro") String filtro) {
 		ModelAndView mvc = new ModelAndView("index");
 		mvc.addObject("prods", pr.findProdutosByName(filtro));
 		
@@ -52,6 +53,9 @@ public class ProdutoController {
 		
 	}
 	
+	
+	
+//deleta um produto
 	@RequestMapping(value="/deletar")
 	public String deletarProduto( long codigo) {
 		Produtos produto = pr.findByCodigo(codigo);

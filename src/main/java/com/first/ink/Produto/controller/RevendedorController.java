@@ -41,11 +41,11 @@ public class RevendedorController {
 		return mvc;
 	
 	}
-	//filtra o revendedor pelo nome
+	//filtra o revendedor pelo cpf do revendedor
 	@PostMapping(value="/filtraRevendedor")
 	public ModelAndView filtraRevendedor(@RequestParam("filtroRevendedor") String filtroRevendedor) {
 		ModelAndView mvc = new ModelAndView("listarRevendedores");
-		mvc.addObject("revend", rr.findRevendedorEntityByName(filtroRevendedor));
+		mvc.addObject("revend", rr.findRevendedorEntityByCpf(filtroRevendedor));
 		return mvc;
 	}
     //deleta o revendedor
@@ -57,5 +57,9 @@ public class RevendedorController {
 		
 		
 	}
+	
+	//edita o revendedor
+	
+	
 	
 }
