@@ -1,0 +1,15 @@
+branch-defaults:
+  default:
+    environment: null
+global:
+  application_name: Produto
+  branch: null
+  default_platform: Java 8 running on 64bit Amazon Linux
+  default_region: us-west-2
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: null
+  workspace_type: Application

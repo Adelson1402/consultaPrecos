@@ -1,0 +1,244 @@
+body{
+	background-image: url("images/impressora-fundo.jpg");
+	background-color: #E0FFFF;
+	font-family: verdana;
+	
+	
+}
+#navegacao{
+  padding-top: 30px;	 
+  color: white;
+  height: 40px;
+  border-bottom: solid black 1px;
+  border-radius: 15px;
+  background-color: #00e1e1;	
+  
+	
+}
+#navegacao a{
+	margin-left: 30px;
+	margin-top:40px;
+	text-decoration: none;
+	color: black;
+	
+	padding: 15px;
+}
+#navegacao a:hover{
+	border-bottom: solid grey 5px ;
+	border-radius: 25px;
+	background-color: #e2e2e2;
+	opacity: 50%;
+	
+	
+}
+
+input{
+	
+	width: 400px;
+	height: 40px;
+	border: solid;
+	border-color: lightblue;
+	border-width: 1px; 
+	text-align: center;
+	font-family: verdana;
+	border-radius: 8px;
+	margin: 10px;
+	text-transform: UPPERCASE;
+}
+
+input:focus{
+	
+	outline: none;
+	
+}
+
+
+#voltagemId{
+	width: 80px;
+	
+}
+
+#osExternaId{
+	width: 100px;
+	
+	
+}
+
+#identificador{
+	
+	border: solid blue;
+	border-radius: 50px;
+	width: 35px;
+	height: 40px;
+	color: blue;
+	text-align: center;
+	font-size: 25px;
+	margin-left: 125%;
+	margin-right: auto;
+	
+}
+
+#caixaDeform{
+	
+	width: 150px;
+	height: 200px;
+	margin-left: 10%;
+	margin-right: auto;
+	
+	
+	
+}
+
+textarea{
+	width: 400px;
+	height: 150px;
+	border: solid;
+	border-color: lightblue;
+	border-radius: 3px;
+	font-family: verdana;
+	font-size: 15px;
+	
+	margin-top: 15px;
+}
+
+textarea:focus{
+	outline: 0;
+	border: solid softblue 2px;
+	
+}
+
+#table{
+	margin-top: 25%;
+	width: 100px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	;
+	
+}
+
+select{
+	width: 200px;
+	height: 30px;
+	border: solid grey;
+	border-radius: 8px;	
+	font-family: verdana;
+}
+
+select:focus{
+	outline: 0;
+	
+	
+	
+}
+
+#btnGravar{
+	width: 100%;
+	height: 60px;
+	background-color: #98FB98;
+	color: #000;
+	border-radius: 25px;
+	border: solid green 2px;
+	margin-bottom: 50px;	
+	margin-top: 30px;
+}
+
+#btnGravar:hover{
+	background-color: green;
+	color: #fff;
+	border: solid #80ff00 2px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
+
+#btnalterar{
+	border: solid grey 1px;
+	border-radius: 15px;
+	width: 100px;
+	height: 60px;
+	background-color: #fff;
+	
+	
+	
+	
+}
+#btnalterar:hover{
+	background-color: darkgrey;
+	box-shadow: 1px 2px 3px 3px;
+	
+	
+}
+
+#btndeletar{
+	border: solid red 1px;
+	border-radius: 15px;
+	width: 100px;
+	height: 60px;
+	background-color: #fff;
+}
+
+#btndeletar:hover{
+	background-color: #ff8080;
+	box-shadow: 1px 2px 3px 3px;
+	
+}
+
+table, td, th{
+	border: solid #fff;
+	border-radius: 10px;
+	text-align: center;
+	background-color: lightblue;
+	
+}
+table{
+	width: 1000px;
+	empty-cells: hide;
+	
+	
+	
+}
+
+
+#finalizado{
+	background-color: yellow;
+	
+	
+	
+}
+
+table th{
+	background-color: #2bffff;
+	text-align: center;
+	height: 90px;
+	
+	
+}
+
+table td{
+	height: 40px;
+	background-color: #fff;
+	
+	
+}
+table td:hover{
+	background-color: #80ffff;
+	
+	
+	
+}
+
+
+#alterarId{
+	border: solid #fff;
+	background-color: #d4d4d4;
+	
+	
+}
+
+#deletarId{
+	border: solid #fff;
+	background-color: #ff8a8a;
+	
+	
+	
+}

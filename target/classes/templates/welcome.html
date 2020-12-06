@@ -1,0 +1,186 @@
+<html
+ xmlns:th="http://thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<link rel="shortcut icon" href="/images/favicon (1).ico" type="image/x-icon"/>
+<!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" charset=UTF-8""/>
+      
+      
+<!-- Style FOOTER -->
+<style>
+body {
+    
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+ #idLogin{
+   text-transform: uppercase;
+ }
+  </style>
+  
+</head>
+
+<body>
+
+<nav class="grey darken-3">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo right">FIRST INK</a>
+      
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul  class="left hide-on-med-and-down">
+         <li><a href="/logout">Sair/Entrar<i class="material-icons right">exit_to_app</i></a></li>
+         <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
+         <li><a href="/manutencao.html">Área Técnica<i class="material-icons right">build</i></a></li>
+         <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
+         <li><a href="">Fornecedores<i class="material-icons right">assignment_ind</i></a></li>
+      </ul> 
+      
+    </div>
+     
+  </nav>
+  <!-- side-nav -->
+     <ul class="sidenav" id="mobile-demo">
+     <hr>
+     <p align="center" id="idLogin">[[${#httpServletRequest.remoteUser}]]</p>
+     <hr>
+         <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
+         <li><a href="/manutencao.html">Área Técnica<i class="material-icons right">build</i></a></li>
+         <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
+         <li><a href="/logout">Sair/Entrar<i class="material-icons right">exit_to_app</i></a></li> 
+      </ul>
+      
+
+
+  <div id="fundo" align="center">
+  <hr>
+   
+   <img src="images/first ink.jpg"/>  
+   <hr>
+   <BR>
+   <BR>
+   <p align="center">SISTEMA EM ATUALIZAÇÃO<br>V 1.9</p>
+  </div>
+  
+  <br>
+  <br>
+   <!-- PRELOADERS -->
+  <div align="center">
+   <div class="preloader-wrapper big active">
+      <div class="spinner-layer spinner-blue">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-red">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-yellow">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+
+      <div class="spinner-layer spinner-green">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div><div class="gap-patch">
+          <div class="circle"></div>
+        </div><div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+      
+    </div>
+    </div> 
+    <!-- PRELOADERS -->
+           <!-- Inicio do footer com TAGS vazias -->
+<header>
+</header>
+<main>
+</main>
+<footer class="page-footer grey">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">VOVIN SYSTEM</h5>
+                <p class="grey-text text-lighten-4">Sistema desenvolvido para cadastro, consulta de preços e consulta de revenda.</p>
+                <p class="grey-text text-lighten-4"></p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">ATALHOS RELACIONADOS</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" target="_blanck" href="http://servicos.mogidascruzes.sp.gov.br/tbw/loginCNPJContribuinte.jsp?execobj=ContribuintesWebRelacionados">Nota Fiscal de Serviço</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blanck" href="http://www.printerservice.com.br/">Printer Service</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blank" href="https://www.teamviewer.com/pt-br/download/windows/">Team viewer</a></li>
+                  <li><a class="grey-text text-lighten-3" target="_blank" href="https://anydesk.com/pt/downloads/windows">AnyDesk</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container" align="center">
+            © 2020 Direitos Reservados <br>Desenvolvido por Adelson dos Santos Pinheiro
+
+            
+            </div>
+          </div>
+        </footer>
+        <!-- FIM do footer com TAGS vazias --> 
+ 
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+       document.addEventListener('DOMcontentLoaded', function(){
+           M.AutoInit();
+
+           });
+     </script>
+     
+     <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    	    var elems = document.querySelectorAll('.sidenav');
+    	    var instances = M.Sidenav.init(elems,);
+    	  });
+     </script>
+        
+    
+  
+    
+       
+     
+</body>
+
+</html>

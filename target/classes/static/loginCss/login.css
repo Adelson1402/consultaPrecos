@@ -1,0 +1,65 @@
+body{
+	background-color: lightBlue;
+	
+	
+}
+
+#painel{
+	margin: 0;
+    background: softBlue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+	
+	
+}
+
+input{
+	border: none;
+	width: 200px;
+	height: 30px;
+	border-radius: 30px;
+	
+}
+
+button{
+	border: none;
+	width: 200px;
+	height: 30px;
+	border-radius: 10px;
+	
+	
+}
+button:hover{
+	background-color: gray;
+	border-radius: 10px;
+	
+	
+}
+
+#avatar{
+	margin-left: 55px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-color: #ff8080;
+	transition: 0.3s ease;
+	
+}
+
+#avatar:hover{
+	transform: rotateY(180deg);
+	
+}
+
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	
+	
+}

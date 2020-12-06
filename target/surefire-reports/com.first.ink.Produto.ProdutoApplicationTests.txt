@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.first.ink.Produto.ProdutoApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.314 s - in com.first.ink.Produto.ProdutoApplicationTests
