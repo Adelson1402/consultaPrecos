@@ -1,5 +1,5 @@
 body{
-	background-image: url("images/impressora-fundo.jpg");
+	background-image: url("impressora-fundo.jpg");
 	background-color: #E0FFFF;
 	font-family: verdana;
 	
@@ -11,7 +11,7 @@ body{
   height: 40px;
   border-bottom: solid black 1px;
   border-radius: 15px;
-  background-color: #00e1e1;	
+  background-color: #9a9a9a;	
   
 	
 }
@@ -19,15 +19,19 @@ body{
 	margin-left: 30px;
 	margin-top:40px;
 	text-decoration: none;
-	color: black;
+	color: #fff;
 	
 	padding: 15px;
 }
 #navegacao a:hover{
 	border-bottom: solid grey 5px ;
 	border-radius: 25px;
-	background-color: #e2e2e2;
+	background-color: #000;
 	opacity: 50%;
+	transition: 0.6s;  	
+    transform-style: preserve-3d;    	
+    position: relative;  
+	transform: rotateY(180deg);
 	
 	
 }
@@ -240,5 +244,26 @@ table td:hover{
 	background-color: #ff8a8a;
 	
 	
+	
+}
+
+#inputBusca button{
+	
+	width: 50%;
+	height: 60px;
+	background-color: #ffff80;
+	color: #000;
+	border-radius: 25px;
+	border: solid green 2px;
+	margin-bottom: 50px;	
+	margin-top: 30px;
+	
+	
+}
+#inputBusca button:hover{
+	
+	background-color: #ff8040;
+	
+	color: #fff;
 	
 }

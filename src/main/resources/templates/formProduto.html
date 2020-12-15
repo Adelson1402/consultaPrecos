@@ -19,7 +19,7 @@ $(".campoDinheiro") .mask('#.##0,00', {reverse: true});
       <!--Import Google Icon Font-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
       <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/materialize/css/materialize.min.css"  media="screen,projection"/>
 
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
@@ -73,23 +73,32 @@ $(".campoDinheiro") .mask('#.##0,00', {reverse: true});
   </div>
   
  <h1 align="center">Cadastro de Produtos</h1>
- <form class="container" method="post">
+ <form class="container" method="post"  action="/cadastrarProduto"  th:object="${prodobj}" >
  <div class="row">
+       
+       
        <div class="input-field col s3">
-  Nome:<input type="text" class="caixasTxt" name="nome" required>
+  Codigo:<input type="text" class="caixasTxt" name="codigo" th:field="*{codigo}" readonly required/>
+       </div>
+       
+       <div class="input-field col s3">
+  Nome:<input type="text" class="caixasTxt" name="nome" th:field="*{nome}" required/>
        </div>
   
    <div class="input-field col s3">
-   Tipo/Modelo:<input type="text" class="caixasTxt" name="tipo" required>
+   Tipo/Modelo:<input type="text" class="caixasTxt" name="tipo" th:field="*{tipo}" required/>
    </div>
    <div class="input-field col s3">
-   Marca:<input type="text" class="caixasTxt" name="marca" required>
+   Marca:<input type="text" class="caixasTxt" name="marca" th:field="*{marca}" required/>
    </div>
    <div class="input-field col s3">
-   Valor:<input type="text"   class="campoDinheiro" name="valor"required  placeholder="R$ 0,00">
+   Valor:<input type="text"   class="campoDinheiro" name="valor" th:field="*{valor}" required  placeholder="R$ 0,00"/>
    </div>
    <div class="input-field col s3">
-   Valor Revenda:<input type="text"   class="campoDinheiro" name="valorRevenda"required  placeholder="R$ 0,00">
+   Valor Revenda:<input type="text"   class="campoDinheiro" name="valorRevenda" th:field="*{valorRevenda}" required  placeholder="R$ 0,00"/>
+   </div>
+   <div class="input-field col s3">
+   Valor Fornecedor:<input type="text"   class="campoDinheiro" name="valorFornecedor" th:field="*{valorFornecedor}" required  placeholder="R$ 0,00"/>
    </div>
   </div>
   

@@ -3,6 +3,7 @@ package com.first.ink.Produto.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -21,14 +22,18 @@ public class ProdutoController {
 	
 	
 	@RequestMapping(value="/cadastrarProdutos", method=RequestMethod.GET)
-	public String form() {
-		return "produtos/formProduto";
+	public ModelAndView form() {
+		ModelAndView mvc = new ModelAndView("formProduto");
+		mvc.addObject("prodobj", new Produtos());
+		return mvc;
 	}
 //salva um produto no banco de dados
-	@RequestMapping(value="/cadastrarProdutos", method=RequestMethod.POST)
+	@RequestMapping(value="**/cadastrarProduto")
 	public String form(Produtos produtos) {
 		
 		pr.save(produtos);
+		
+		
 		
 		return "redirect:/cadastrarProdutos";
 	}
@@ -40,6 +45,7 @@ public class ProdutoController {
 		ModelAndView mvc = new ModelAndView("index");
 		Iterable<Produtos> listProd = pr.findAll();
 		mvc.addObject("prods", listProd);
+		
 		return mvc;
 		
 	}
@@ -48,6 +54,8 @@ public class ProdutoController {
 	public ModelAndView filtro(@RequestParam("filtro") String filtro) {
 		ModelAndView mvc = new ModelAndView("index");
 		mvc.addObject("prods", pr.findProdutosByName(filtro));
+		mvc.addObject("prodobj", new Produtos());
+		
 		
 		return mvc;
 		
@@ -64,4 +72,17 @@ public class ProdutoController {
 		return "redirect:/produtos";
 		
 }
+	
+	//edita um produto
+	@RequestMapping(value="/editarProduto/{codigo}")
+	public ModelAndView editarProduto(@PathVariable("codigo") long codigo) {
+		Produtos produtos = pr.findByCodigo(codigo);
+		ModelAndView mvc = new ModelAndView("formProduto");
+		mvc.addObject("prodobj",produtos);
+	    
+		
+		return mvc;
+		
+		
+	}
 }

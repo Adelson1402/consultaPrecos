@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.first.ink.Produtos.models.Equipamentos;
@@ -68,5 +69,14 @@ public class EquipamentoController {
 	}
 	
 	//buscando equipamento por numero da O.S genesis...
+	
+	@RequestMapping(value="/buscaOsGenesis")
+	public ModelAndView buscaPelaOsGenesis(@RequestParam("buscaOs") String ordemGenesis) {
+		ModelAndView mvc = new ModelAndView("equipamento");
+		mvc.addObject("equip", er.findEquipamentosByOrdemDeServicoExterna(ordemGenesis));
+		mvc.addObject("equipobj", new Equipamentos());
+		return mvc;
+		
+	}
 }
 
