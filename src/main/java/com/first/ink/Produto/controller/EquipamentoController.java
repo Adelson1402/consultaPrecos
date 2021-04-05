@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.first.ink.Produto.TratamentoErros.TratamentoDeErros;
 import com.first.ink.Produtos.models.Equipamentos;
 import com.first.ink.repository.EquipamentoRepository;
 
@@ -18,6 +19,7 @@ public class EquipamentoController {
 	@Autowired
 	private EquipamentoRepository er;
 	
+	private TratamentoDeErros tratamentoDeErros;
 	
 		
 	
@@ -70,7 +72,7 @@ public class EquipamentoController {
 	
 	//buscando equipamento por numero da O.S genesis...
 	
-	@RequestMapping(value="/buscaOsGenesis")
+	@RequestMapping(value="**/buscaOsGenesis")
 	public ModelAndView buscaPelaOsGenesis(@RequestParam("buscaOs") String ordemGenesis) {
 		ModelAndView mvc = new ModelAndView("equipamento");
 		mvc.addObject("equip", er.findEquipamentosByOrdemDeServicoExterna(ordemGenesis));

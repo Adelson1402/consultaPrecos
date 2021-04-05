@@ -12,7 +12,10 @@ public interface EquipamentoRepository extends CrudRepository<Equipamentos, Stri
 
 	Equipamentos findByEquipamentoID(long equipamentoID);
     
+	
 	Equipamentos findEquipamentosByOrdemDeServicoExterna(String orderDeServicoExterna);
+	
+	Equipamentos findEquipamentosByOrdemDeServicoExterna(int i);
 	
 
 	
