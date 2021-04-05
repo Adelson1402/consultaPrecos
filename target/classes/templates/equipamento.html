@@ -64,9 +64,11 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   
 <!-- cadastrar modelo --> 
 <div id="inputBusca">
-   <label>Busca:</label>
-   <input type="text" placeholder="digite a O.S Genesis" onkeypress="return SomenteNumero(event)"/>
+ <form method="post" action="buscaOsGenesis">
+    <label>Busca:</label>
+   <input name="buscaOs" type="text" placeholder="digite a O.S Genesis" onkeypress="return SomenteNumero(event)"/>
    <button>BUSCAR</button>
+  </form> 
 </div>
 <table id="tabelaID">
  <thead>

@@ -1,0 +1,2601 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1 (UNKNOWN_BRANCH-false; 2015-01-15T16:53:43+0100) JAXWS-RI/2.2.10 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://lemontech.com.br/selfbooking/wsselfbooking/services" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WsSelfBookingService" targetNamespace="http://lemontech.com.br/selfbooking/wsselfbooking/services">
+  	
+  <types>
+    		
+    <xsd:schema>
+      			
+      <xsd:import namespace="http://lemontech.com.br/selfbooking/wsselfbooking/services" schemaLocation="https://treinamento.lemontech.com.br:443/wsselfbooking/WsSelfBookingService?xsd=13"/>
+      		
+    </xsd:schema>
+    	
+  </types>
+  	
+  <message name="pesquisarSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarSolicitacao" name="pesquisarSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="pesquisarSolicitacaoResponse">
+    		
+    <part element="tns:pesquisarSolicitacaoResponse" name="pesquisarSolicitacaoResponse"/>
+    	
+  </message>
+  	
+  <message name="sincronizarSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:sincronizarSolicitacao" name="sincronizarSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="sincronizarSolicitacaoResponse">
+    		
+    <part element="tns:sincronizarSolicitacaoResponse" name="sincronizarSolicitacaoResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarRegional">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarRegional" name="cadastrarRegional"/>
+    	
+  </message>
+  	
+  <message name="cadastrarRegionalResponse">
+    		
+    <part element="tns:cadastrarRegionalResponse" name="cadastrarRegionalResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusRegional">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusRegional" name="alterarStatusRegional"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusRegionalResponse">
+    		
+    <part element="tns:alterarStatusRegionalResponse" name="alterarStatusRegionalResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarContaContabil">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarContaContabil" name="cadastrarContaContabil"/>
+    	
+  </message>
+  	
+  <message name="cadastrarContaContabilResponse">
+    		
+    <part element="tns:cadastrarContaContabilResponse" name="cadastrarContaContabilResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusContaContabil">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusContaContabil" name="alterarStatusContaContabil"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusContaContabilResponse">
+    		
+    <part element="tns:alterarStatusContaContabilResponse" name="alterarStatusContaContabilResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarCentroDeCusto" name="cadastrarCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="cadastrarCentroDeCustoResponse">
+    		
+    <part element="tns:cadastrarCentroDeCustoResponse" name="cadastrarCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusCentroDeCusto" name="alterarStatusCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusCentroDeCustoResponse">
+    		
+    <part element="tns:alterarStatusCentroDeCustoResponse" name="alterarStatusCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarSubCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarSubCentroDeCusto" name="cadastrarSubCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="cadastrarSubCentroDeCustoResponse">
+    		
+    <part element="tns:cadastrarSubCentroDeCustoResponse" name="cadastrarSubCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusSubCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusSubCentroDeCusto" name="alterarStatusSubCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusSubCentroDeCustoResponse">
+    		
+    <part element="tns:alterarStatusSubCentroDeCustoResponse" name="alterarStatusSubCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarParametrizacaoCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarParametrizacaoCentroDeCusto" name="cadastrarParametrizacaoCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="cadastrarParametrizacaoCentroDeCustoResponse">
+    		
+    <part element="tns:cadastrarParametrizacaoCentroDeCustoResponse" name="cadastrarParametrizacaoCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="deletarParametrizacaoCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:deletarParametrizacaoCentroDeCusto" name="deletarParametrizacaoCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="deletarParametrizacaoCentroDeCustoResponse">
+    		
+    <part element="tns:deletarParametrizacaoCentroDeCustoResponse" name="deletarParametrizacaoCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFuncionario">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarFuncionario" name="cadastrarFuncionario"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFuncionarioResponse">
+    		
+    <part element="tns:cadastrarFuncionarioResponse" name="cadastrarFuncionarioResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="pesquisarFuncionario">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarFuncionario" name="pesquisarFuncionario"/>
+    	
+  </message>
+  	
+  <message name="pesquisarFuncionarioResponse">
+    		
+    <part element="tns:pesquisarFuncionarioResponse" name="pesquisarFuncionarioResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusFuncionario">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusFuncionario" name="alterarStatusFuncionario"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusFuncionarioResponse">
+    		
+    <part element="tns:alterarStatusFuncionarioResponse" name="alterarStatusFuncionarioResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFornecedor">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarFornecedor" name="cadastrarFornecedor"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFornecedorResponse">
+    		
+    <part element="tns:cadastrarFornecedorResponse" name="cadastrarFornecedorResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusFornecedor">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusFornecedor" name="alterarStatusFornecedor"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusFornecedorResponse">
+    		
+    <part element="tns:alterarStatusFornecedorResponse" name="alterarStatusFornecedorResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarTarifario">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarTarifario" name="cadastrarTarifario"/>
+    	
+  </message>
+  	
+  <message name="cadastrarTarifarioResponse">
+    		
+    <part element="tns:cadastrarTarifarioResponse" name="cadastrarTarifarioResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusTarifario">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusTarifario" name="alterarStatusTarifario"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusTarifarioResponse">
+    		
+    <part element="tns:alterarStatusTarifarioResponse" name="alterarStatusTarifarioResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="aprovarSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:aprovarSolicitacao" name="aprovarSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="aprovarSolicitacaoResponse">
+    		
+    <part element="tns:aprovarSolicitacaoResponse" name="aprovarSolicitacaoResponse"/>
+    	
+  </message>
+  	
+  <message name="reprovarSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:reprovarSolicitacao" name="reprovarSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="reprovarSolicitacaoResponse">
+    		
+    <part element="tns:reprovarSolicitacaoResponse" name="reprovarSolicitacaoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="inserirIdentificadorIntegracao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:inserirIdentificadorIntegracao" name="inserirIdentificadorIntegracao"/>
+    	
+  </message>
+  	
+  <message name="inserirIdentificadorIntegracaoResponse">
+    		
+    <part element="tns:inserirIdentificadorIntegracaoResponse" name="inserirIdentificadorIntegracaoResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarParametrizacaoViajante">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarParametrizacaoViajante" name="cadastrarParametrizacaoViajante"/>
+    	
+  </message>
+  	
+  <message name="cadastrarParametrizacaoViajanteResponse">
+    		
+    <part element="tns:cadastrarParametrizacaoViajanteResponse" name="cadastrarParametrizacaoViajanteResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="deletarParametrizacaoViajante">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:deletarParametrizacaoViajante" name="deletarParametrizacaoViajante"/>
+    	
+  </message>
+  	
+  <message name="deletarParametrizacaoViajanteResponse">
+    		
+    <part element="tns:deletarParametrizacaoViajanteResponse" name="deletarParametrizacaoViajanteResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="pesquisarVendasConsolidadora">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarVendasConsolidadora" name="pesquisarVendasConsolidadora"/>
+    	
+  </message>
+  	
+  <message name="pesquisarVendasConsolidadoraResponse">
+    		
+    <part element="tns:pesquisarVendasConsolidadoraResponse" name="pesquisarVendasConsolidadoraResponse"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFornecedorSource">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarFornecedorSource" name="cadastrarFornecedorSource"/>
+    	
+  </message>
+  	
+  <message name="cadastrarFornecedorSourceResponse">
+    		
+    <part element="tns:cadastrarFornecedorSourceResponse" name="cadastrarFornecedorSourceResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="inserirItemDespesa">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:inserirItemDespesa" name="inserirItemDespesa"/>
+    	
+  </message>
+  	
+  <message name="inserirItemDespesaResponse">
+    		
+    <part element="tns:inserirItemDespesaResponse" name="inserirItemDespesaResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarProjeto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarProjeto" name="cadastrarProjeto"/>
+    	
+  </message>
+  	
+  <message name="cadastrarProjetoResponse">
+    		
+    <part element="tns:cadastrarProjetoResponse" name="cadastrarProjetoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="alterarStatusProjeto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:alterarStatusProjeto" name="alterarStatusProjeto"/>
+    	
+  </message>
+  	
+  <message name="alterarStatusProjetoResponse">
+    		
+    <part element="tns:alterarStatusProjetoResponse" name="alterarStatusProjetoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="atualizarBudget">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:atualizarBudget" name="atualizarBudget"/>
+    	
+  </message>
+  	
+  <message name="atualizarBudgetResponse">
+    		
+    <part element="tns:atualizarBudgetResponse" name="atualizarBudgetResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="consultaBilheteCia">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:consultaBilheteCia" name="consultaBilheteCia"/>
+    	
+  </message>
+  	
+  <message name="consultaBilheteCiaResponse">
+    		
+    <part element="tns:consultaBilheteCiaResponse" name="consultaBilheteCiaResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarHoteisHomologados">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarHoteisHomologados" name="cadastrarHoteisHomologados"/>
+    	
+  </message>
+  	
+  <message name="cadastrarHoteisHomologadosResponse">
+    		
+    <part element="tns:cadastrarHoteisHomologadosResponse" name="cadastrarHoteisHomologadosResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="atrelarUsuarios">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:atrelarUsuarios" name="atrelarUsuarios"/>
+    	
+  </message>
+  	
+  <message name="atrelarUsuariosResponse">
+    		
+    <part element="tns:atrelarUsuariosResponse" name="atrelarUsuariosResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="finalizarSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:finalizarSolicitacao" name="finalizarSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="finalizarSolicitacaoResponse">
+    		
+    <part element="tns:finalizarSolicitacaoResponse" name="finalizarSolicitacaoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarTreinamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarTreinamento" name="cadastrarTreinamento"/>
+    	
+  </message>
+  	
+  <message name="cadastrarTreinamentoResponse">
+    		
+    <part element="tns:cadastrarTreinamentoResponse" name="cadastrarTreinamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarParticipanteTreinamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarParticipanteTreinamento" name="cadastrarParticipanteTreinamento"/>
+    	
+  </message>
+  	
+  <message name="cadastrarParticipanteTreinamentoResponse">
+    		
+    <part element="tns:cadastrarParticipanteTreinamentoResponse" name="cadastrarParticipanteTreinamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="deletarTreinamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:deletarTreinamento" name="deletarTreinamento"/>
+    	
+  </message>
+  	
+  <message name="deletarTreinamentoResponse">
+    		
+    <part element="tns:deletarTreinamentoResponse" name="deletarTreinamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="deletarParticipanteTreinamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:deletarParticipanteTreinamento" name="deletarParticipanteTreinamento"/>
+    	
+  </message>
+  	
+  <message name="deletarParticipanteTreinamentoResponse">
+    		
+    <part element="tns:deletarParticipanteTreinamentoResponse" name="deletarParticipanteTreinamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="criarPreSolicitacao">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:criarPreSolicitacao" name="criarPreSolicitacao"/>
+    	
+  </message>
+  	
+  <message name="criarPreSolicitacaoResponse">
+    		
+    <part element="tns:criarPreSolicitacaoResponse" name="criarPreSolicitacaoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="contaBancaria">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:contaBancaria" name="contaBancaria"/>
+    	
+  </message>
+  	
+  <message name="contaBancariaResponse">
+    		
+    <part element="tns:contaBancariaResponse" name="contaBancariaResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="importarDelegacaoParametrizacaoCentroDeCusto">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:importarDelegacaoParametrizacaoCentroDeCusto" name="importarDelegacaoParametrizacaoCentroDeCusto"/>
+    	
+  </message>
+  	
+  <message name="importarDelegacaoParametrizacaoCentroDeCustoResponse">
+    		
+    <part element="tns:importarDelegacaoParametrizacaoCentroDeCustoResponse" name="importarDelegacaoParametrizacaoCentroDeCustoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarControleCliente">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarControleCliente" name="cadastrarControleCliente"/>
+    	
+  </message>
+  	
+  <message name="cadastrarControleClienteResponse">
+    		
+    <part element="tns:cadastrarControleClienteResponse" name="cadastrarControleClienteResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="cadastrarUnidadeNegocio">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:cadastrarUnidadeNegocio" name="cadastrarUnidadeNegocio"/>
+    	
+  </message>
+  	
+  <message name="cadastrarUnidadeNegocioResponse">
+    		
+    <part element="tns:cadastrarUnidadeNegocioResponse" name="cadastrarUnidadeNegocioResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="importarFaturaCartaoCredito">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:importarFaturaCartaoCredito" name="importarFaturaCartaoCredito"/>
+    	
+  </message>
+  	
+  <message name="importarFaturaCartaoCreditoResponse">
+    		
+    <part element="tns:importarFaturaCartaoCreditoResponse" name="importarFaturaCartaoCreditoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="pesquisarAdiantamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarAdiantamento" name="pesquisarAdiantamento"/>
+    	
+  </message>
+  	
+  <message name="pesquisarAdiantamentoResponse">
+    		
+    <part element="tns:pesquisarAdiantamentoResponse" name="pesquisarAdiantamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="pesquisarRelatorioDespesas">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarRelatorioDespesas" name="pesquisarRelatorioDespesas"/>
+    	
+  </message>
+  	
+  <message name="pesquisarRelatorioDespesasResponse">
+    		
+    <part element="tns:pesquisarRelatorioDespesasResponse" name="pesquisarRelatorioDespesasResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="importarDespesa">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:importarDespesa" name="importarDespesa"/>
+    	
+  </message>
+  	
+  <message name="importarDespesaResponse">
+    		
+    <part element="tns:importarDespesaResponse" name="importarDespesaResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="liberarAdiantamento">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:liberarAdiantamento" name="liberarAdiantamento"/>
+    	
+  </message>
+  	
+  <message name="liberarAdiantamentoResponse">
+    		
+    <part element="tns:liberarAdiantamentoResponse" name="liberarAdiantamentoResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="contabilizarRelatorioDespesas">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:contabilizarRelatorioDespesas" name="contabilizarRelatorioDespesas"/>
+    	
+  </message>
+  	
+  <message name="contabilizarRelatorioDespesasResponse">
+    		
+    <part element="tns:contabilizarRelatorioDespesasResponse" name="contabilizarRelatorioDespesasResponse"/>
+    	
+  </message>
+  	
+	
+  <message name="pesquisarLogsAcesso">
+    		
+    <part element="tns:keyClient" name="keyClient"/>
+    		
+    <part element="tns:userName" name="userName"/>
+    		
+    <part element="tns:userPassword" name="userPassword"/>
+    		
+    <part element="tns:pesquisarLogsAcesso" name="pesquisarLogsAcesso"/>
+    	
+  </message>
+  	
+  <message name="pesquisarLogsAcessoResponse">
+    		
+    <part element="tns:pesquisarLogsAcessoResponse" name="pesquisarLogsAcessoResponse"/>
+    	
+  </message>
+  	
+	
+  <portType name="WsSelfBooking">
+    		
+    <operation name="pesquisarSolicitacao" parameterOrder="keyClient userName userPassword pesquisarSolicitacao">
+      			
+      <input message="tns:pesquisarSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarSolicitacaoRequest"/>
+      			
+      <output message="tns:pesquisarSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="sincronizarSolicitacao" parameterOrder="keyClient userName userPassword sincronizarSolicitacao">
+      			
+      <input message="tns:sincronizarSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/sincronizarSolicitacaoRequest"/>
+      			
+      <output message="tns:sincronizarSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/sincronizarSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarRegional" parameterOrder="keyClient userName userPassword cadastrarRegional">
+      			
+      <input message="tns:cadastrarRegional" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarRegionalRequest"/>
+      			
+      <output message="tns:cadastrarRegionalResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarRegionalResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusRegional" parameterOrder="keyClient userName userPassword alterarStatusRegional">
+      			
+      <input message="tns:alterarStatusRegional" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusRegionalRequest"/>
+      			
+      <output message="tns:alterarStatusRegionalResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusRegionalResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarContaContabil" parameterOrder="keyClient userName userPassword cadastrarContaContabil">
+      			
+      <input message="tns:cadastrarContaContabil" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarContaContabilRequest"/>
+      			
+      <output message="tns:cadastrarContaContabilResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarContaContabilResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusContaContabil" parameterOrder="keyClient userName userPassword alterarStatusContaContabil">
+      			
+      <input message="tns:alterarStatusContaContabil" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusContaContabilRequest"/>
+      			
+      <output message="tns:alterarStatusContaContabilResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusContaContabilResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarCentroDeCusto" parameterOrder="keyClient userName userPassword cadastrarCentroDeCusto">
+      			
+      <input message="tns:cadastrarCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarCentroDeCustoRequest"/>
+      			
+      <output message="tns:cadastrarCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusCentroDeCusto" parameterOrder="keyClient userName userPassword alterarStatusCentroDeCusto">
+      			
+      <input message="tns:alterarStatusCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusCentroDeCustoRequest"/>
+      			
+      <output message="tns:alterarStatusCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarSubCentroDeCusto" parameterOrder="keyClient userName userPassword cadastrarSubCentroDeCusto">
+      			
+      <input message="tns:cadastrarSubCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarSubCentroDeCustoRequest"/>
+      			
+      <output message="tns:cadastrarSubCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarSubCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusSubCentroDeCusto" parameterOrder="keyClient userName userPassword alterarStatusSubCentroDeCusto">
+      			
+      <input message="tns:alterarStatusSubCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusSubCentroDeCustoRequest"/>
+      			
+      <output message="tns:alterarStatusSubCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusSubCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarParametrizacaoCentroDeCusto" parameterOrder="keyClient userName userPassword cadastrarParametrizacaoCentroDeCusto">
+      			
+      <input message="tns:cadastrarParametrizacaoCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParametrizacaoCentroDeCustoRequest"/>
+      			
+      <output message="tns:cadastrarParametrizacaoCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParametrizacaoCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="deletarParametrizacaoCentroDeCusto" parameterOrder="keyClient userName userPassword deletarParametrizacaoCentroDeCusto">
+      			
+      <input message="tns:deletarParametrizacaoCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParametrizacaoCentroDeCustoRequest"/>
+      			
+      <output message="tns:deletarParametrizacaoCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParametrizacaoCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarFuncionario" parameterOrder="keyClient userName userPassword cadastrarFuncionario">
+      			
+      <input message="tns:cadastrarFuncionario" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarFuncionarioRequest"/>
+      			
+      <output message="tns:cadastrarFuncionarioResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarFuncionarioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="pesquisarFuncionario" parameterOrder="keyClient userName userPassword pesquisarFuncionario">
+      			
+      <input message="tns:pesquisarFuncionario" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarFuncionarioRequest"/>
+      			
+      <output message="tns:pesquisarFuncionarioResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarFuncionarioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusFuncionario" parameterOrder="keyClient userName userPassword alterarStatusFuncionario">
+      			
+      <input message="tns:alterarStatusFuncionario" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusFuncionarioRequest"/>
+      			
+      <output message="tns:alterarStatusFuncionarioResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusFuncionarioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarFornecedor" parameterOrder="keyClient userName userPassword cadastrarFornecedor">
+      			
+      <input message="tns:cadastrarFornecedor" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarFornecedorRequest"/>
+      			
+      <output message="tns:cadastrarFornecedorResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarFornecedorResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusFornecedor" parameterOrder="keyClient userName userPassword alterarStatusFornecedor">
+      			
+      <input message="tns:alterarStatusFornecedor" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusFornecedorRequest"/>
+      			
+      <output message="tns:alterarStatusFornecedorResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusFornecedorResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarTarifario" parameterOrder="keyClient userName userPassword cadastrarTarifario">
+      			
+      <input message="tns:cadastrarTarifario" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarTarifarioRequest"/>
+      			
+      <output message="tns:cadastrarTarifarioResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarTarifarioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusTarifario" parameterOrder="keyClient userName userPassword alterarStatusTarifario">
+      			
+      <input message="tns:alterarStatusTarifario" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusTarifarioRequest"/>
+      			
+      <output message="tns:alterarStatusTarifarioResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/alterarStatusTarifarioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="aprovarSolicitacao" parameterOrder="keyClient userName userPassword aprovarSolicitacao">
+      			
+      <input message="tns:aprovarSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/aprovarSolicitacaoRequest"/>
+      			
+      <output message="tns:aprovarSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/aprovarSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="reprovarSolicitacao" parameterOrder="keyClient userName userPassword reprovarSolicitacao">
+      			
+      <input message="tns:reprovarSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/reprovarSolicitacaoRequest"/>
+      			
+      <output message="tns:reprovarSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/reprovarSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="inserirIdentificadorIntegracao" parameterOrder="keyClient userName userPassword inserirIdentificadorIntegracao">
+      			
+      <input message="tns:inserirIdentificadorIntegracao" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/inserirIdentificadorIntegracaoRequest"/>
+      			
+      <output message="tns:inserirIdentificadorIntegracaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/inserirIdentificadorIntegracaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarParametrizacaoViajante" parameterOrder="keyClient userName userPassword cadastrarParametrizacaoViajante">
+      			
+      <input message="tns:cadastrarParametrizacaoViajante" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParametrizacaoViajanteRequest"/>
+      			
+      <output message="tns:cadastrarParametrizacaoViajanteResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParametrizacaoViajanteResponse"/>
+      		
+    </operation>
+    		
+    <operation name="deletarParametrizacaoViajante" parameterOrder="keyClient userName userPassword deletarParametrizacaoViajante">
+      			
+      <input message="tns:deletarParametrizacaoViajante" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParametrizacaoViajanteRequest"/>
+      			
+      <output message="tns:deletarParametrizacaoViajanteResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParametrizacaoViajanteResponse"/>
+      		
+    </operation>
+    		
+    <operation name="pesquisarVendasConsolidadora" parameterOrder="keyClient userName userPassword pesquisarVendasConsolidadora">
+      			
+      <input message="tns:pesquisarVendasConsolidadora" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarVendasConsolidadoraRequest"/>
+      			
+      <output message="tns:pesquisarVendasConsolidadoraResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarVendasConsolidadoraResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarFornecedorSource" parameterOrder="keyClient userName userPassword cadastrarFornecedorSource">
+      			
+      <input message="tns:cadastrarFornecedorSource" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarFornecedorSourceRequest"/>
+      			
+      <output message="tns:cadastrarFornecedorSourceResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/cadastrarFornecedorSourceResponse"/>
+      		
+    </operation>
+    		
+    <operation name="inserirItemDespesa" parameterOrder="keyClient userName userPassword inserirItemDespesa">
+      			
+      <input message="tns:inserirItemDespesa" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/inserirItemDespesaRequest"/>
+      			
+      <output message="tns:inserirItemDespesaResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsSelfBooking/inserirItemDespesaResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarProjeto" parameterOrder="keyClient userName userPassword cadastrarProjeto">
+      			
+      <input message="tns:cadastrarProjeto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarProjetoRequest"/>
+      			
+      <output message="tns:cadastrarProjetoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarProjetoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusProjeto" parameterOrder="keyClient userName userPassword alterarStatusProjeto">
+      			
+      <input message="tns:alterarStatusProjeto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking//alterarStatusProjetoRequest"/>
+      			
+      <output message="tns:alterarStatusProjetoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/alterarStatusProjetoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="atualizarBudget" parameterOrder="keyClient userName userPassword atualizarBudget">
+      			
+      <input message="tns:atualizarBudget" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/atualizarBudgetRequest"/>
+      			
+      <output message="tns:atualizarBudgetResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/atualizarBudgetResponse"/>
+      		
+    </operation>
+    		
+    <operation name="consultaBilheteCia" parameterOrder="keyClient userName userPassword consultaBilheteCia">
+      			
+      <input message="tns:consultaBilheteCia" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/consultaBilheteCiaRequest"/>
+      			
+      <output message="tns:consultaBilheteCiaResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/consultaBilheteCiaResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarHoteisHomologados" parameterOrder="keyClient userName userPassword cadastrarHoteisHomologados">
+      			
+      <input message="tns:cadastrarHoteisHomologados" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarHoteisHomologadosRequest"/>
+      			
+      <output message="tns:cadastrarHoteisHomologadosResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarHoteisHomologadosResponse"/>
+      		
+    </operation>
+    		
+    <operation name="atrelarUsuarios" parameterOrder="keyClient userName userPassword atrelarUsuarios">
+      			
+      <input message="tns:atrelarUsuarios" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/atrelarUsuariosRequest"/>
+      			
+      <output message="tns:atrelarUsuariosResponse" wsam:Action="http://lemontech.com.br/selfbooking/fornecedores/services/WsFornecedores/atrelarUsuariosResponse"/>
+      		
+    </operation>
+    		
+    <operation name="finalizarSolicitacao" parameterOrder="keyClient userName userPassword finalizarSolicitacao">
+      			
+      <input message="tns:finalizarSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/finalizarSolicitacaoRequest"/>
+      			
+      <output message="tns:finalizarSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/finalizarSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarTreinamento" parameterOrder="keyClient userName userPassword cadastrarTreinamento">
+      			
+      <input message="tns:cadastrarTreinamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarTreinamentoRequest"/>
+      			
+      <output message="tns:cadastrarTreinamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarTreinamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarParticipanteTreinamento" parameterOrder="keyClient userName userPassword cadastrarParticipanteTreinamento">
+      			
+      <input message="tns:cadastrarParticipanteTreinamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParticipanteTreinamentoRequest"/>
+      			
+      <output message="tns:cadastrarParticipanteTreinamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarParticipanteTreinamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="deletarTreinamento" parameterOrder="keyClient userName userPassword deletarTreinamento">
+      			
+      <input message="tns:deletarTreinamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarTreinamentoRequest"/>
+      			
+      <output message="tns:deletarTreinamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarTreinamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="deletarParticipanteTreinamento" parameterOrder="keyClient userName userPassword deletarParticipanteTreinamento">
+      			
+      <input message="tns:deletarParticipanteTreinamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParticipanteTreinamentoRequest"/>
+      			
+      <output message="tns:deletarParticipanteTreinamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/deletarParticipanteTreinamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="criarPreSolicitacao" parameterOrder="keyClient userName userPassword criarPreSolicitacao">
+      			
+      <input message="tns:criarPreSolicitacao" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/criarPreSolicitacaoRequest"/>
+      			
+      <output message="tns:criarPreSolicitacaoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/criarPreSolicitacaoResponse"/>
+      		
+    </operation>
+    		
+		
+    <operation name="contaBancaria" parameterOrder="keyClient userName userPassword contaBancaria">
+      			
+      <input message="tns:contaBancaria" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/contaBancariaRequest"/>
+      			
+      <output message="tns:contaBancariaResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/contaBancariaResponse"/>
+      		
+    </operation>
+    		
+    <operation name="importarDelegacaoParametrizacaoCentroDeCusto" parameterOrder="keyClient userName userPassword importarDelegacaoParametrizacaoCentroDeCusto">
+      			
+      <input message="tns:importarDelegacaoParametrizacaoCentroDeCusto" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarDelegacaoParametrizacaoCentroDeCustoRequest"/>
+      			
+      <output message="tns:importarDelegacaoParametrizacaoCentroDeCustoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarDelegacaoParametrizacaoCentroDeCustoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarControleCliente" parameterOrder="keyClient userName userPassword cadastrarControleCliente">
+      			
+      <input message="tns:cadastrarControleCliente" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarControleClienteRequest"/>
+      			
+      <output message="tns:cadastrarControleClienteResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarControleClienteResponse"/>
+      		
+    </operation>
+    		
+    <operation name="cadastrarUnidadeNegocio" parameterOrder="keyClient userName userPassword cadastrarUnidadeNegocio">
+      			
+      <input message="tns:cadastrarUnidadeNegocio" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarUnidadeNegocioRequest"/>
+      			
+      <output message="tns:cadastrarUnidadeNegocioResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/cadastrarUnidadeNegocioResponse"/>
+      		
+    </operation>
+    		
+    <operation name="importarFaturaCartaoCredito" parameterOrder="keyClient userName userPassword importarFaturaCartaoCredito">
+      			
+      <input message="tns:importarFaturaCartaoCredito" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarFaturaCartaoCreditoRequest"/>
+      			
+      <output message="tns:importarFaturaCartaoCreditoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarFaturaCartaoCreditoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="pesquisarAdiantamento" parameterOrder="keyClient userName userPassword pesquisarAdiantamento">
+      			
+      <input message="tns:pesquisarAdiantamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarAdiantamentoRequest"/>
+      			
+      <output message="tns:pesquisarAdiantamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarAdiantamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="pesquisarRelatorioDespesas" parameterOrder="keyClient userName userPassword pesquisarRelatorioDespesas">
+      			
+      <input message="tns:pesquisarRelatorioDespesas" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarRelatorioDespesasRequest"/>
+      			
+      <output message="tns:pesquisarRelatorioDespesasResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarRelatorioDespesasResponse"/>
+      		
+    </operation>
+    		
+    <operation name="importarDespesa" parameterOrder="keyClient userName userPassword importarDespesa">
+      			
+      <input message="tns:importarDespesa" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarDespesaRequest"/>
+      			
+      <output message="tns:importarDespesaResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/importarDespesaResponse"/>
+      		
+    </operation>
+    		
+    <operation name="liberarAdiantamento" parameterOrder="keyClient userName userPassword liberarAdiantamento">
+      			
+      <input message="tns:liberarAdiantamento" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/liberarAdiantamentoRequest"/>
+      			
+      <output message="tns:liberarAdiantamentoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/liberarAdiantamentoResponse"/>
+      		
+    </operation>
+    		
+    <operation name="contabilizarRelatorioDespesas" parameterOrder="keyClient userName userPassword contabilizarRelatorioDespesas">
+      			
+      <input message="tns:contabilizarRelatorioDespesas" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/contabilizarRelatorioDespesasRequest"/>
+      			
+      <output message="tns:contabilizarRelatorioDespesasResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/contabilizarRelatorioDespesasResponse"/>
+      		
+    </operation>
+    		
+		
+    <operation name="pesquisarLogsAcesso" parameterOrder="keyClient userName userPassword pesquisarLogsAcesso">
+      			
+      <input message="tns:pesquisarLogsAcesso" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarLogsAcessoRequest"/>
+      			
+      <output message="tns:pesquisarLogsAcessoResponse" wsam:Action="http://lemontech.com.br/selfbooking/wsselfbooking/services/WsSelfBooking/pesquisarLogsAcessoResponse"/>
+      		
+    </operation>
+    		
+	
+  </portType>
+  	
+  <binding name="WsSelfBookingPortBinding" type="tns:WsSelfBooking">
+    		
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    		
+    <operation name="pesquisarSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="sincronizarSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="sincronizarSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:sincronizarSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:sincronizarSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:sincronizarSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarRegional">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarRegional" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarRegional" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarRegional" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarRegional" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusRegional">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusRegional" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusRegional" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusRegional" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusRegional" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarContaContabil">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarContaContabil" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarContaContabil" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarContaContabil" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarContaContabil" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusContaContabil">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusContaContabil" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusContaContabil" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusContaContabil" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusContaContabil" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarSubCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarSubCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarSubCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarSubCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarSubCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusSubCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusSubCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusSubCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusSubCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusSubCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarParametrizacaoCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarParametrizacaoCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="deletarParametrizacaoCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="deletarParametrizacaoCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarFuncionario">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarFuncionario" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFuncionario" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFuncionario" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFuncionario" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="pesquisarFuncionario">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarFuncionario" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarFuncionario" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarFuncionario" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarFuncionario" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusFuncionario">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusFuncionario" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFuncionario" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFuncionario" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFuncionario" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarFornecedor">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarFornecedor" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedor" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedor" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedor" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusFornecedor">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusFornecedor" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFornecedor" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFornecedor" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusFornecedor" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarTarifario">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarTarifario" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTarifario" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTarifario" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTarifario" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="alterarStatusTarifario">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusTarifario" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusTarifario" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusTarifario" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusTarifario" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="aprovarSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="aprovarSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:aprovarSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:aprovarSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:aprovarSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="reprovarSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="reprovarSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:reprovarSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:reprovarSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:reprovarSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="inserirIdentificadorIntegracao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="inserirIdentificadorIntegracao" use="literal"/>
+        				
+        <soap:header message="tns:inserirIdentificadorIntegracao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:inserirIdentificadorIntegracao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:inserirIdentificadorIntegracao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarParametrizacaoViajante">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarParametrizacaoViajante" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoViajante" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoViajante" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParametrizacaoViajante" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="deletarParametrizacaoViajante">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="deletarParametrizacaoViajante" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoViajante" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoViajante" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:deletarParametrizacaoViajante" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="pesquisarVendasConsolidadora">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarVendasConsolidadora" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarVendasConsolidadora" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarVendasConsolidadora" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarVendasConsolidadora" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarFornecedorSource">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarFornecedorSource" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedorSource" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedorSource" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarFornecedorSource" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="inserirItemDespesa">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="inserirItemDespesa" use="literal"/>
+        				
+        <soap:header message="tns:inserirItemDespesa" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:inserirItemDespesa" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:inserirItemDespesa" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarProjeto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarProjeto" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarProjeto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarProjeto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarProjeto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="alterarStatusProjeto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="alterarStatusProjeto" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusProjeto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusProjeto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:alterarStatusProjeto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="atualizarBudget">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="atualizarBudget" use="literal"/>
+        				
+        <soap:header message="tns:atualizarBudget" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:atualizarBudget" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:atualizarBudget" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="consultaBilheteCia">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="consultaBilheteCia" use="literal"/>
+        				
+        <soap:header message="tns:consultaBilheteCia" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:consultaBilheteCia" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:consultaBilheteCia" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="cadastrarHoteisHomologados">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarHoteisHomologados" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarHoteisHomologados" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarHoteisHomologados" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarHoteisHomologados" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+    <operation name="atrelarUsuarios">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="atrelarUsuarios" use="literal"/>
+        				
+        <soap:header message="tns:atrelarUsuarios" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:atrelarUsuarios" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:atrelarUsuarios" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="finalizarSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="finalizarSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:finalizarSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:finalizarSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:finalizarSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarTreinamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarTreinamento" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTreinamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTreinamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarTreinamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarParticipanteTreinamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarParticipanteTreinamento" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParticipanteTreinamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParticipanteTreinamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarParticipanteTreinamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="deletarTreinamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="deletarTreinamento" use="literal"/>
+        				
+        <soap:header message="tns:deletarTreinamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:deletarTreinamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:deletarTreinamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="deletarParticipanteTreinamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="deletarParticipanteTreinamento" use="literal"/>
+        				
+        <soap:header message="tns:deletarParticipanteTreinamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:deletarParticipanteTreinamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:deletarParticipanteTreinamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="criarPreSolicitacao">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="criarPreSolicitacao" use="literal"/>
+        				
+        <soap:header message="tns:criarPreSolicitacao" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:criarPreSolicitacao" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:criarPreSolicitacao" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="contaBancaria">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="contaBancaria" use="literal"/>
+        				
+        <soap:header message="tns:contaBancaria" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:contaBancaria" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:contaBancaria" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="importarDelegacaoParametrizacaoCentroDeCusto">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="importarDelegacaoParametrizacaoCentroDeCusto" use="literal"/>
+        				
+        <soap:header message="tns:importarDelegacaoParametrizacaoCentroDeCusto" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:importarDelegacaoParametrizacaoCentroDeCusto" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:importarDelegacaoParametrizacaoCentroDeCusto" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarControleCliente">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarControleCliente" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarControleCliente" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarControleCliente" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarControleCliente" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="cadastrarUnidadeNegocio">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="cadastrarUnidadeNegocio" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarUnidadeNegocio" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarUnidadeNegocio" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:cadastrarUnidadeNegocio" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="importarFaturaCartaoCredito">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="importarFaturaCartaoCredito" use="literal"/>
+        				
+        <soap:header message="tns:importarFaturaCartaoCredito" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:importarFaturaCartaoCredito" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:importarFaturaCartaoCredito" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    	
+		
+		
+    <operation name="pesquisarAdiantamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarAdiantamento" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarAdiantamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarAdiantamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarAdiantamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="pesquisarRelatorioDespesas">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarRelatorioDespesas" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarRelatorioDespesas" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarRelatorioDespesas" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarRelatorioDespesas" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="importarDespesa">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="importarDespesa" use="literal"/>
+        				
+        <soap:header message="tns:importarDespesa" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:importarDespesa" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:importarDespesa" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="liberarAdiantamento">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="liberarAdiantamento" use="literal"/>
+        				
+        <soap:header message="tns:liberarAdiantamento" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:liberarAdiantamento" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:liberarAdiantamento" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="contabilizarRelatorioDespesas">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="contabilizarRelatorioDespesas" use="literal"/>
+        				
+        <soap:header message="tns:contabilizarRelatorioDespesas" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:contabilizarRelatorioDespesas" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:contabilizarRelatorioDespesas" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+		
+    <operation name="pesquisarLogsAcesso">
+      			
+      <soap:operation soapAction=""/>
+      			
+      <input>
+        				
+        <soap:body parts="pesquisarLogsAcesso" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarLogsAcesso" part="keyClient" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarLogsAcesso" part="userName" use="literal"/>
+        				
+        <soap:header message="tns:pesquisarLogsAcesso" part="userPassword" use="literal"/>
+        			
+      </input>
+      			
+      <output>
+        				
+        <soap:body use="literal"/>
+        			
+      </output>
+      		
+    </operation>
+    		
+	
+  </binding>
+  	
+  <service name="WsSelfBookingService">
+    		
+    <port binding="tns:WsSelfBookingPortBinding" name="WsSelfBookingPort">
+      			
+      <soap:address location="http://tempuri.org/Produto/services/WsSelfBookingPort"/>
+      		
+    </port>
+    	
+  </service>
+  
+</definitions>

@@ -28,10 +28,16 @@ public class Produtos implements Serializable  {
 	private long codigo;
 	
 	private String nome;
+	
 	private String tipo;
+	
 	private String valor;
+	
 	private String marca;
+	
 	private String valorRevenda;
+	
+	private String valorFornecedor;
 	
 	
 	public long getCodigo() {
@@ -72,4 +78,12 @@ public class Produtos implements Serializable  {
 		this.valorRevenda = valorRevenda;
 		
 	}
+	public String getValorFornecedor() {
+		return valorFornecedor;
+	}
+	public void setValorFornecedor(String valorFornecedor) {
+		this.valorFornecedor = valorFornecedor;
+	}
+	
+	
 }

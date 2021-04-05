@@ -2,10 +2,13 @@ package com.first.ink.Produtos.models;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.UniqueConstraint;
 
 @Entity
 public class Equipamentos {
@@ -30,6 +33,7 @@ public class Equipamentos {
 	
 	private Date equipamentoData;
 	
+	@Column(unique = true)
 	private String ordemDeServicoExterna;
 	
 	private String equipamentoStatus;
@@ -89,9 +93,12 @@ public class Equipamentos {
 	public void setEquipamentoData(Date equipamentoData) {
 		this.equipamentoData = equipamentoData;
 	}
+	
+	
 	public String getOrdemDeServicoExterna() {
 		return ordemDeServicoExterna;
 	}
+	
 	public void setOrdemDeServicoExterna(String ordemDeServicoExterna) {
 		this.ordemDeServicoExterna = ordemDeServicoExterna;
 	}

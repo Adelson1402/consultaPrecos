@@ -8,3 +8,8 @@ function SomenteNumero(e){
 	else  return false;
     }
 }
+function mascaraDinheiro(){
+$(document).ready(function(){
+$(".campoDinheiro") .mask('#.##0,00', {reverse: true});
+})}
+

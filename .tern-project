@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "plugins": {
     "guess-types": {
@@ -14,21 +13,4 @@
   "libs": [
     "browser"
   ]
-=======
-{
-  "plugins": {
-    "guess-types": {
-      
-    },
-    "outline": {
-      
-    },
-    "angular": {
-      
-    }
-  },
-  "libs": [
-    "browser"
-  ]
->>>>>>> 41b65cef814089c43ac925afae9866edff3a51d4
 }

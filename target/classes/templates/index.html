@@ -36,7 +36,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
       <ul  class="left hide-on-med-and-down">
          <li><a href="/logout">Sair/Entrar<i class="material-icons right">exit_to_app</i></a></li>
          <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
-         <li><a href="/manutencao.html">Área Técnica<i class="material-icons right">build</i></a></li>
+         <li><a href="/listEquip">Área Técnica<i class="material-icons right">build</i></a></li>
          <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
       </ul> 
       
@@ -46,7 +46,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
   <!-- side-nav -->
      <ul class="sidenav" id="mobile-demo">
          <li><a href="cadastrarProdutos">Cadastrar Produto<i class="material-icons right">control_point</i></a></li>
-         <li><a href="/manutencao.html">Área Técnica<i class="material-icons right">build</i></a></li>
+         <li><a href="/listEquip">Área Técnica<i class="material-icons right">build</i></a></li>
          <li><a href="/revendedor">Cadastrar Revendedores<i class="material-icons right">person</i></a></li>
          <li><a href="/logout">Sair/Entrar<i class="material-icons right">exit_to_app</i></a></li> 
       </ul>
@@ -78,6 +78,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <th>Tipo/Modelo</th>  
     <th>Valor</th> 
     <th>Valor Revenda</th> 
+    <th>Valor Fornecedor</th> 
     <th>Marca</th>
     <th>Deletar</th>
     <th>Editar</th>
@@ -89,11 +90,12 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <tr th:each="produto : ${prods}">
       <td><span th:text="${produto.nome}"></span></td>
       <td><span th:text="${produto.tipo}"></span></td>
-      <td><span th:text="${produto.valor}"></span></td>
-      <td><span th:text="${produto.valorRevenda}"></span></td>
+      <td>R$ <span th:text="${produto.valor}"></span></td>
+      <td>R$ <span th:text="${produto.valorRevenda}"></span></td>
+      <td>R$ <span th:text="${produto.valorFornecedor}"></span></td>
       <td><span th:text="${produto.marca}"></span></td>
       <td><a class="btn waves-effect waves-light btn small" th:href="${(#mvc.url('PC#deletarProduto').arg(0, produto.codigo)).build()}"> <i class="material-icons right">delete</i></a></td>
-      <td><a class="btn waves-effect waves-light btn small"> <i class="material-icons right">edit</i></a></td>
+      <td><a class="btn waves-effect waves-light btn small" th:href="@{/editarProduto/{codigo}(codigo=${produto.codigo})}"> <i class="material-icons right">edit</i></a></td>
     
 </tr>
 </table>
