@@ -33,8 +33,6 @@ public class ProdutoController {
 		
 		pr.save(produtos);
 		
-		
-		
 		return "redirect:/cadastrarProdutos";
 	}
 	
@@ -80,7 +78,6 @@ public class ProdutoController {
 		ModelAndView mvc = new ModelAndView("formProduto");
 		mvc.addObject("prodobj",produtos);
 	    
-		
 		return mvc;
 		
 		
