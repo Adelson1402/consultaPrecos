@@ -91,7 +91,7 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <td><span th:text="${equipa.equipamentoID}"></span></td>
     <td><span th:text="${equipa.ordemDeServicoExterna}"></span></td>
     <td><span th:text="${equipa.equipamentoMarca}"></span></td>
-    <td><span th:text="${equipa.equipamentoModelo}"></span></td>
+    <td><span th:text="${equipa.equipamentoModelo}"></span></td> 
     <td><a th:href="@{/alterar/{equipamentoID}(equipamentoID=${equipa.equipamentoID})}"><button id="btnalterar">Alterar</button></a></td>
     <td><a th:href="${(#mvc.url('EC#excluirEquipamento').arg(0,equipa.equipamentoID)).build()}"><button id="btndeletar">deletar</button></a></td>
    

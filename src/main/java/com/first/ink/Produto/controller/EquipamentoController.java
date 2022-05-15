@@ -34,7 +34,7 @@ public class EquipamentoController {
 	public String salvaEquip(Equipamentos equipamentos) {
 		er.save(equipamentos);
 		return "redirect:/listEquip";
-	}
+	} 
 	
 	//listar equipamentos
 	
